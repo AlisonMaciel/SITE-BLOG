@@ -1,11 +1,13 @@
+"use client";
+
 import Link, { LinkProps } from "next/link";
 import { Button } from "../ui/button";
-import { NextRouter } from "next/router";
 import SheetMenu from "../Sheet";
 
 type NavLinkProps = {
-  indexPage: NextRouter;
-} & LinkProps;
+  indexPage: string
+  href: string
+} & LinkProps
 
 export default function NavLink({ indexPage }: NavLinkProps) {
   return (
@@ -14,7 +16,7 @@ export default function NavLink({ indexPage }: NavLinkProps) {
         <Link
           className={`
             hidden md:block 
-            ${indexPage.asPath == "/"
+            ${indexPage === '/'
               ? "text-blue-500"
               : "text-gray-100 hover:text-[#7EA4D7]"}
             
@@ -27,7 +29,7 @@ export default function NavLink({ indexPage }: NavLinkProps) {
         <Link
           className={`
             hidden md:block 
-            ${indexPage.asPath == "/blog"
+            ${indexPage === '/blog'
               ? "text-blue-500"
               : "text-gray-100 hover:text-[#7EA4D7]"}
             

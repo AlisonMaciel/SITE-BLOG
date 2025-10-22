@@ -1,18 +1,18 @@
-import rectangle4841 from "../../../../../public/assets/posts-image/Rectangle 4841.svg"
-import rectangle48415 from "../../../../../public/assets/posts-image/Rectangle 4841 (5).svg"
+import rectangle4841 from "../../../public/assets/posts-image/Rectangle 4840.svg"
+import rectangle48415 from "../../../public/assets/posts-image/Rectangle 4841 (5).svg"
 
-import rectangle48414 from "../../../../../public/assets/posts-image/Rectangle 4841 (4).svg"
+import rectangle48414 from "../../../public/assets/posts-image/Rectangle 4841 (4).svg"
 
-import rectangle48413 from "../../../../../public/assets/posts-image/Rectangle 4841 (3).svg"
+import rectangle48413 from "../../../public/assets/posts-image/Rectangle 4841 (3).svg"
 
-import rectangle48412 from "../../../../../public/assets/posts-image/Rectangle 4841 (2).svg"
+import rectangle48412 from "../../../public/assets/posts-image/Rectangle 4841 (2).svg"
 
-import rectangle48411 from "../../../../../public/assets/posts-image/Rectangle 4841 (1).svg"
+import rectangle48411 from "../../../public/assets/posts-image/Rectangle 4841 (1).svg"
 
-import aspenDokidis from "../../../../../public/assets/author-image/aspen-dokidis.svg"
-import cristoferCarder from "../../../../../public/assets/author-image/cristofer-carder.svg"
-import dulceWestervelt from "../../../../../public/assets/author-image/dulce-westervelt.svg"
-import martinGeidt from "../../../../../public/assets/author-image/martin-geidt.svg"
+import aspenDokidis from "../../../public/assets/author-image/aspen-dokidis.svg"
+import cristoferCarder from "../../../public/assets/author-image/cristofer-carder.svg"
+import dulceWestervelt from "../../../public/assets/author-image/dulce-westervelt.svg"
+import martinGeidt from "../../../public/assets/author-image/martin-geidt.svg"
 
 export const creatededPosts = [
   { 

@@ -1,8 +1,9 @@
-import { ArrowRight, Link } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
 import Group from "../../../public/assets/image.svg";
+import Link from "next/link";
 
 export default function Feature() {
   return (
@@ -35,7 +36,7 @@ export default function Feature() {
           </div>
           <Button
             variant="primary"
-            className="flex items-center w-fit max-md:hidden"
+            className="flex items-center w-fit cursor-pointer max-md:hidden"
             asChild
           >
             <Link href="/blog">
@@ -47,16 +48,16 @@ export default function Feature() {
         <div className="mt-8">
           <Image src={Group} alt="group" />
         </div>
-        <Button
-          variant="primary"
-          className="flex items-center md:hidden"
-          asChild
-        >
-          <Link href="/blog">
-            Criar loja grátics
-            <ArrowRight className="h-6 w-6 text-[#E9EAEC]" />
-          </Link>
-        </Button>
+          <Button
+            variant="primary"
+            className="flex items-center w-fit cursor-pointer md:hidden"
+            asChild
+          >
+            <Link href="/blog">
+              Criar loja grátics
+              
+            </Link>
+          </Button>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import { creatededPosts } from "./components/Createded-Posts";
+import { creatededPosts } from "../../components/Createded-Posts";
 
 import { Github, Instagram, Linkedin, LinkIcon } from "lucide-react";
 

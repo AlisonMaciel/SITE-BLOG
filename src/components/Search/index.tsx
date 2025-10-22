@@ -1,6 +1,5 @@
 import { CircleX, SearchIcon } from "lucide-react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export function Search() {
   const router = useRouter();
@@ -38,7 +37,7 @@ export function Search() {
       className={`mr-2 ${q ? 'text-[#2C85FC]' : ''}`} 
       size={16} />
       <input
-        className="w-full placeholder:#93979E text-[#E9EAEC] bg-transparent border-0 outline-none"
+        className="w-full placeholder:#93979E text-[#E9EAEC] bg-transparent border-0 outline-none cursor-pointer"
         placeholder="Buscar"
         value={query}
         onChange={handleQueryChange}

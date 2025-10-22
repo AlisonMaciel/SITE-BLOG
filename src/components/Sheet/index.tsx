@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Sheet,
   SheetContent,
@@ -13,12 +15,11 @@ import { Button } from "../ui/button";
 
 import Link, { LinkProps } from "next/link";
 
-import { NextRouter } from "next/router";
-
 import { useState } from "react";
 
 type SheetMenuProps = {
-  indexPage: NextRouter
+  indexPage: string
+  href: string
 } & LinkProps
 
 export default function SheetMenu({indexPage}:SheetMenuProps) {
@@ -41,7 +42,7 @@ export default function SheetMenu({indexPage}:SheetMenuProps) {
             <Link
               onClick={() => setIsOpen(!isOpen)}
               className={`
-                ${indexPage.asPath == "/"
+                ${indexPage === "/"
                   ? "text-blue-500"
                   : "text-gray-100 hover:text-[#7EA4D7]"}
                 
@@ -54,7 +55,7 @@ export default function SheetMenu({indexPage}:SheetMenuProps) {
             <Link
               onClick={() => setIsOpen(!isOpen)}
               className={`
-                ${indexPage.asPath == "/blog"
+                ${indexPage === "/blog"
                   ? "text-blue-500"
                   : "text-gray-100 hover:text-[#7EA4D7]"}
                 

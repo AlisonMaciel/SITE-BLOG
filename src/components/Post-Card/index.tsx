@@ -5,17 +5,19 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Inbox } from "lucide-react";
 
-import { PostProps } from "../..";
+import { PostProps } from "@/pages/blog"; 
 
-export function PostCard({post}:PostProps) {
-  const router = useRouter()
-  const query = router.query.q as string ?? ''
-  const posts = post.filter((post) => post.title.toLocaleLowerCase().includes(query))
+export function PostCard({ post }: PostProps) {
+  const router = useRouter();
+  const query = (router.query.q as string) ?? "";
+  const posts = post.filter((post) =>
+    post.title.toLocaleLowerCase().includes(query)
+  );
   const DateFormat = new Intl.DateTimeFormat("pt-BR");
-  console.log(posts)
+
   return (
     <>
-      {posts && (
+      {posts &&
         posts.map((p) => (
           <Link href={`/blog/${p.slug}`} key={p.id}>
             <div className="bg-[#14161A] border border-[#20242C] rounded-xl max-w-[305px] min-h-[310px] p-2 relative transition-all duration-300 hover:border-[#2266C1]">
@@ -51,16 +53,16 @@ export function PostCard({post}:PostProps) {
               </div>
             </div>
           </Link>
-        ))
-      )}
+        ))}
       {posts.length === 0 && (
         <div className="flex flex-col items-center justify-center mx-auto col-span-3 border border-dashed p-5">
           <Inbox className="text-cyan-400" size={44} />
-          <p className="mt-3 text-[#E9EAEC] text-center">Não possível completar sua busca, por favor verifique o título e tente novamente!</p>
+          <p className="mt-3 text-[#E9EAEC] text-center">
+            Não possível completar sua busca, por favor verifique o título e
+            tente novamente!
+          </p>
         </div>
       )}
     </>
   );
 }
-
-
